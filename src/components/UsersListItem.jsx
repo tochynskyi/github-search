@@ -24,7 +24,7 @@ function UsersListItem({user}) {
 	useEffect(() => {
 		if (selectedUser) {
 			dispatch(getUser(selectedUser))
-			navigate(`/user/${selectedUser}`)
+			navigate(`/users/${selectedUser}`)
 			document.title = selectedUser
 		}
 	}, [selectedUser])

@@ -8,7 +8,7 @@ function App() {
       <h1>Github Searcher</h1>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/user/*" element={<User />} />
+        <Route path="/users/*" element={<User />} />
       </Routes>
     </BrowserRouter>
   );

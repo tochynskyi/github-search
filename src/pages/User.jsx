@@ -8,7 +8,9 @@ import { getRepos } from '../fetch/fetchData';
 export const User = () => {
 	const [inputValue, setInputValue] = useState(null)
 	const user = useSelector(state => state.user.user)
+	console.log(inputValue);
 
+	
 
 	return (
 		<div className='user'>
