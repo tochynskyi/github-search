@@ -3,18 +3,11 @@ const SET_USER = "SET_USER";
 const SET_REPOSITORIES = "SET_REPOSITORIES";
 
 const usersListState = {
-  users:
-    sessionStorage.getItem("UsersList") === null
-      ? []
-      : JSON.parse(sessionStorage.UsersList),
+  users: []
 };
 
 const userState = {
-  user: 
-    sessionStorage.getItem("User") !== null
-      ? JSON.parse(sessionStorage.User)
-   : {},
-
+  user: {}
 };
 
 const reposState = {

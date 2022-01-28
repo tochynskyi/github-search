@@ -5,10 +5,7 @@ export const getUsersList = (value) => {
   return async (dispatch) => {
     await axios
       .get(`https://api.github.com/search/users?q=${value}`)
-      .then((res) => dispatch(setUsersList(res.data.items)))
-      .then((res) =>
-        sessionStorage.setItem("UsersList", JSON.stringify(res.payload))
-      )
+      .then((res) => dispatch(setUsersList(res.data.items))) 
       .catch((error) => console.log(error));
   };
 };
@@ -19,14 +16,11 @@ export const getUser = (value) => {
     await axios
       .get(`https://api.github.com/users/${value}`)
       .then((user) => dispatch(setUser(user.data)))
-      .then((user) =>
-		sessionStorage.setItem("User", JSON.stringify(user.payload))
-      )
       .catch((error) => console.log(error));
   };
 };
 
-export const getRepos = (value, user) => {	
+export const getRepos = (user) => {	
 	return async (dispatch) => {
 		await axios
 		  .get(`https://api.github.com/users/${user}/repos`)
