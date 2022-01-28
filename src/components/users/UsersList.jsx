@@ -1,20 +1,21 @@
 import React from 'react'
 import UsersListItem from './UsersListItem'
 import {useSelector} from "react-redux";
+import List from '../list/List';
+
 
 
 
 
 function UsersList() {
 	const users = useSelector(state => state.users.users)
-	
 	return (
-		<ul>
+		<List>
 			{users.length === 0 ? 'No users' : users.map(user => <UsersListItem 
 				user={user} 
 				key={user.id}/>
 			)}
-		</ul>
+		</List>
 	)
 }
 

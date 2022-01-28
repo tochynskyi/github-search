@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import {useSelector} from "react-redux";
+import List from "../list/List";
 import ReposListItem from "./ReposListItem";
 
 
@@ -13,9 +13,10 @@ const ReposList = ({ inputValue = ''}) => {
 		}
 
 	return (
-		<ul>
+		<List>
 			{filterRep().map((rep) => <ReposListItem key={rep.id} rep={rep}/>)}
-		</ul>
+		</List>
+		
 	)
 }
 

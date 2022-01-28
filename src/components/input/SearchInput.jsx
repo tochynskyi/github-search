@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import {useDispatch} from "react-redux";
+import s from "./SearchInput.module.scss"
 
 
 function SearchInput({ placeholder, fetchFunc, user, inputValue }) {
@@ -16,10 +17,10 @@ function SearchInput({ placeholder, fetchFunc, user, inputValue }) {
 	}, [user, value])
 
 
-
 	return (
-		<div>
-			<input onChange={(e) => setValue(e.target.value)} placeholder={placeholder} style={{width: '100%'}}/>
+		<div className={s.form__group}>
+			<input className={s.form__field} id="inputName" type="text" onChange={(e) => setValue(e.target.value)} placeholder={placeholder}  autoComplete='off'/>
+			<label className={s.form__label} htmlFor='inputName'>{placeholder}</label>
 		</div>
 	)
 }

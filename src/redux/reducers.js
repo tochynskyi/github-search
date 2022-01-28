@@ -10,10 +10,11 @@ const usersListState = {
 };
 
 const userState = {
-  user:
-    sessionStorage.getItem("User") === null
-      ? {}
-      : JSON.parse(sessionStorage.User),
+  user: 
+    sessionStorage.getItem("User") !== null
+      ? JSON.parse(sessionStorage.User)
+   : {},
+
 };
 
 const reposState = {
