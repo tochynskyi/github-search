@@ -1,0 +1,75 @@
+@import "../../css/index.scss";
+
+.user {
+	display: flex;
+	height: 90px;
+	background-color: $surface;
+	padding: 10px;
+	border-radius: 5px;
+	&__content {
+		display: flex;
+		width: 100%;
+		margin-right: 20px;
+	}
+	&__avatar {
+		width: 70px;
+		height: 100%;
+		margin-right: 15px;
+		img {
+			max-width: 100%;
+			height: 100%;
+			border-radius: 3px;
+		}
+	}
+	&__name {
+		color: $onSurface;
+		font-size: 1.5rem;
+		align-self: center;
+		@media (max-width: 768px) {
+			font-size: 1.3rem;
+		}
+	}
+	&__dots {
+		position: relative;
+		cursor: pointer;
+		height: 100%;
+		width: 20px;
+		&::after {
+			position: absolute;
+			top: 20%;
+			content: "\2807";
+			font-size: 2rem;
+		}
+	}
+
+	&__dropdown {
+		position: absolute;
+		opacity: 0;
+		pointer-events: none;
+		transform: translateX(0px);
+		&__active {
+			position: absolute;
+			opacity: 1;
+			transform: translateX(-30px);
+			right: 15px;
+			top: -10px;
+			width: 110px;
+			height: 129%;
+			border-radius: 5px;
+			background-color: $primary;
+			transition: opacity 0.1s ease, transform 0.5s ease-in-out;
+			li {
+				position: absolute;
+				font-size: 1.2rem;
+				vertical-align: middle;
+				text-align: center;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			li a {
+				text-decoration: none;
+				color: $blackground;
+			}
+		}
+	}
+}
