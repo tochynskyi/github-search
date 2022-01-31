@@ -1,6 +1,7 @@
 @import "../../css/index.scss";
 
 
+
 .repos {
 	display: flex;
 	align-items: center;
@@ -11,12 +12,19 @@
 	&__name {
 		color: $onSurface;
 	}
-	&__info {
+	&__info__container {
 		display: flex;
 		flex-direction: column;
 		color: $onBackground;
-		span {
-			color: $primary;
-		}
+	}
+	&__info {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__info__number {
+		font-size: 1.3rem;
+		color: $primary;
+		margin-right: 5px;
 	}
 }

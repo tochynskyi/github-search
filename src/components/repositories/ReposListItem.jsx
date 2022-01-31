@@ -1,17 +1,20 @@
-import s from "./ReposListItem.module.scss";
+import style from "./ReposListItem.module.scss";
+import Icon from "../Icon/Icon";
 
 const ReposListItem = ({ rep }) => {
   const openInNewTab = (url) => window.open(url);
 
   return (
-    <li className={s.repos} onClick={() => openInNewTab(rep.html_url)}>
-      <div className={s.repos__name}>{rep.name}</div>
-      <div className={s.repos__info}>
-        <div>
-          <span>{rep.forks_count}</span> Forks
+    <li className={style.repos} onClick={() => openInNewTab(rep.html_url)}>
+      <div className={style.repos__name}>{rep.name}</div>
+      <div className={style.repos__info__container}>
+        <div className={style.repos__info}>
+          <span className={style.repos__info__number}>{rep.forks_count}</span>
+          <Icon icon='fork'/>
         </div>
-        <div>
-          <span>{rep.stargazers_count}</span> Stars
+        <div className={style.repos__info}>
+		  <span className={style.repos__info__number}>{rep.stargazers_count}</span>
+          <Icon icon='star'/>
         </div>
       </div>
     </li>

@@ -3,11 +3,11 @@ const SET_USER = "SET_USER";
 const SET_REPOSITORIES = "SET_REPOSITORIES";
 
 const usersListState = {
-  users: []
+  users: [],
 };
 
 const userState = {
-  user: {}
+  user: {},
 };
 
 const reposState = {

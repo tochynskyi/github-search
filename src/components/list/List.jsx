@@ -1,6 +1,6 @@
 import React from "react";
-import s from "./List.module.scss";
+import style from "./List.module.scss";
 
-const List = ({ children }) => <ul className={s.list}>{children}</ul>;
+const List = ({ children }) => <ul className={style.list}>{children}</ul>;
 
 export default List;

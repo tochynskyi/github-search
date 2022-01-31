@@ -10,15 +10,12 @@ export const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-	!!search && dispatch(getUsersList(search));
+    !!search && dispatch(getUsersList(search));
   }, [search]);
 
   return (
     <div>
-      <SearchInput
-        placeholder={"Search for users..."}
-        fetchFunc={getUsersList}
-      />
+      <SearchInput placeholder={"Search for users..."} />
       <UsersList />
     </div>
   );

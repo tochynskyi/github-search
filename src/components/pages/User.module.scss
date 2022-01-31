@@ -7,6 +7,10 @@
 	&__head {
 		display: flex;
 		margin-bottom: 20px;
+		@media (max-width: 768px) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 	&__avatar {
 		height: 300px;
@@ -15,6 +19,9 @@
 			height: 100%;
 			object-fit: cover;
 			object-position: center;
+		}
+		@media (max-width: 768px) {
+			width: 300px;
 		}
 	}
 	&__info {
@@ -33,6 +40,9 @@
 	&__biography {
 		margin-bottom: 30px;
 		width: 100%;
+		@media (max-width: 768px) {
+			text-align: center;
+		}
 	}
 	&__bioText {
 		height: 30px;
@@ -53,4 +63,9 @@
 		border-color: $primary;
 		border-radius: 10px 5px;
 	}
+}
+
+.search__wrapper {
+	display: flex;
+	flex-direction: column;
 }
