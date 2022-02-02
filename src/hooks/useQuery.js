@@ -7,7 +7,7 @@ const useQuery = () => {
   const search = query.get("s");
   const user = query.get("u")
 
-  return { query, search, user};
+  return { location, query, search, user};
 };
 
 export default useQuery;

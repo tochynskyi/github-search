@@ -2,7 +2,7 @@
   "name": "github_search-rep",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tochynskyi.github.io/github-search/",
+  "homepage": "https://tochynskyi.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
