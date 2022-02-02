@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import ReposList from "../repositories/ReposList";
-import SearchInput from "../input/SearchInput";
+import ReposList from "../ReposList/ReposList";
+import SearchInput from "../SearchInput/SearchInput";
 import { getRepos, getUser } from "../../fetch/fetchData";
 import style from "./User.module.scss";
 import useQuery from "../../hooks/useQuery";

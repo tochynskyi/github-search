@@ -8,7 +8,7 @@ function UsersListItem({ user }) {
 
   const onUserClick = (name) => {
     navigate({
-      pathname: "/users",
+      pathname: "/github-search/users",
       search: `?u=${name}`,
       replace: true,
     });

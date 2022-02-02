@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { getUsersList } from "../../fetch/fetchData";
 import { useDispatch } from "react-redux";
-import SearchInput from "../input/SearchInput";
-import UsersList from "../users/UsersList";
+import SearchInput from "../SearchInput/SearchInput";
+import UsersList from "../UsersList/UsersList";
 import useQuery from "../../hooks/useQuery";
 
 export const Home = () => {

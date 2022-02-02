@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import List from "../list/List";
+import List from "../List/List";
 import ReposListItem from "./ReposListItem";
 
 const ReposList = ({ inputValue = "" }) => {
