@@ -10,8 +10,8 @@ function App() {
     <BrowserRouter history={history}>
 		<h1 className='title'>Github Searcher</h1>
 			<Routes>
-			<Route path="/" element={<Home />} />
-			<Route path="/users" element={<User />} />
+			<Route path="github-search/" element={<Home />} />
+			<Route path="github-search/users" element={<User />} />
 			</Routes>
 		</BrowserRouter>
 	 </div>
