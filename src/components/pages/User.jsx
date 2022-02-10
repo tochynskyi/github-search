@@ -10,10 +10,20 @@ export const User = () => {
   const dispatch = useDispatch();
   const query = useQuery();
   const user = useSelector((state) => state.user.user);
+	
+	const {
+		name,
+		email,
+		location,
+		created_at,
+		followers,
+		following,
+		bio
+	} = user
 
   const [inputValue, setInputValue] = useState(null);
   const [open, setOpen] = useState(false);
-
+	
   useEffect(() => {
     dispatch(getUser(query.user));
     dispatch(getRepos(query.user));
@@ -25,7 +35,7 @@ export const User = () => {
   return (
     <>
       {Object.keys(user).length === 0 ? (
-        <div>Loading...</div>
+        <div style={{textAlign: 'center'}}>Loading...</div>
       ) : (
         <div>
           <div className={style.user}>
@@ -34,44 +44,44 @@ export const User = () => {
                 <img src={user.avatar_url} alt="avatar" />
               </div>
               <ul className={style.user__info}>
-                {user.name && (
+                {name && (
                   <li>
-                    User name: <span>{user.name}</span>
+                    User name: <span>{name}</span>
                   </li>
                 )}
-                {user.email && (
+                {email && (
                   <li>
-                    Email: <span>{user.email}</span>
+                    Email: <span>{email}</span>
                   </li>
                 )}
-                {user.location && (
+                {location && (
                   <li>
-                    Location: <span>{user.location}</span>
+                    Location: <span>{location}</span>
                   </li>
                 )}
-                {user.created_at && (
+                {created_at && (
                   <li>
-                    Join date: <span>{date(user.created_at)}</span>
+                    Join date: <span>{date(created_at)}</span>
                   </li>
                 )}
-                {user.created_at && (
+                {followers && (
                   <li>
-                    Followers: <span>{user.followers}</span>
+                    Followers: <span>{followers}</span>
                   </li>
                 )}
-                {user.created_at && (
+                {following && (
                   <li>
-                    Following: <span>{user.following}</span>
+                    Following: <span>{following}</span>
                   </li>
                 )}
               </ul>
             </div>
-            {user.bio && (
+            {bio && (
               <div className={style.user__biography}>
                 <p className={open ? style.user__bioText__open : style.user__bioText}>
-                  {user.bio}
+                  {bio}
                 </p>
-                {isShowBtn(user.bio) && (
+                {isShowBtn(bio) && (
                   <button
                     className={style.user__btn}
                     onClick={() => setOpen(!open)}

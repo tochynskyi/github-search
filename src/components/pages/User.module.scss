@@ -1,6 +1,5 @@
 @import "../../css/index.scss";
 
-
 .user {
 	display: flex;
 	flex-direction: column;
@@ -27,7 +26,7 @@
 	&__info {
 		padding: 10px 15px;
 		span {
-		color: $primary;
+			color: $primary;
 		}
 		li {
 			margin-bottom: 5px;
@@ -48,14 +47,15 @@
 		height: 30px;
 		overflow: hidden;
 		text-overflow: ellipsis;
-  		white-space: pre;
+		white-space: pre;
 		margin-bottom: 5px;
 		&__open {
-		margin-bottom: 5px;
-		height: auto;
+			margin-bottom: 5px;
+			height: auto;
 		}
 	}
 	&__btn {
+		-webkit-appearance: none;
 		background-color: transparent;
 		color: $primary;
 		height: 25px;

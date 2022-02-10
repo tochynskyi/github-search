@@ -9,7 +9,7 @@ function UsersList() {
   return (
     <List>
       {users.length === 0
-        ? "No users"
+        ? (<div style={{textAlign: 'center'}}>No users!</div>)
         : users.map((user) => <UsersListItem user={user} key={user.id} />)}
     </List>
   );
